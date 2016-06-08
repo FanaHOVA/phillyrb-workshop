@@ -1,24 +1,26 @@
-# README
+# phillyrb-workshop
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Install RVM: https://rvm.io/rvm/install
 
-Things you may want to cover:
+Create a Rails 5 specific gemset and start a new project in the phillyrb-workshop directory
 
-* Ruby version
+`rvm use ruby-2.3.1@rails5.0 --create`
+`rails new phillyrb-workshop --api`
 
-* System dependencies
+Navigate to the directory (`cd phillyrb-workshop`)
 
-* Configuration
+Create the Card model scaffold
 
-* Database creation
+`rails g scaffold Card name:string health:integer mana_cost:integer attack:integer`
 
-* Database initialization
+Run the database migration with `rake db:migrate`
 
-* How to run the test suite
+Create the CardSet scaffold
 
-* Services (job queues, cache servers, search engines, etc.)
+`rails g scaffold CardSet name:string`
 
-* Deployment instructions
+Add card_set_id to the Card table with a migration
 
-* ...
+`rails g migration add_card_set_id_to_cards card_set_id:integer`
+
+Run the migrations.
