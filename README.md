@@ -1,5 +1,7 @@
 # phillyrb-workshop
 
+Goal of the workshop was teaching how to build a Rails API. Hearthstone was the inspiration for the data models.
+
 Install RVM: https://rvm.io/rvm/install
 
 Create a Rails 5 specific gemset and start a new project in the phillyrb-workshop directory
